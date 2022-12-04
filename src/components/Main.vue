@@ -45,7 +45,14 @@ export default{
     </section>
 
     <section id="img-sfondo-sezione">
-
+        <div class="container">
+            <div class="menu">
+                
+            </div>
+            <div class="logo-bg">
+                <img src="../assets/img/dc-logo-bg.png" alt="">
+            </div>
+        </div>
     </section>
 </template>
 
@@ -85,6 +92,16 @@ export default{
     width: 40px;
     object-fit: cover;
     height: -webkit-fill-available;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-bg{
+    position: relative;
+    top: -50px;
 }
 
 a{
