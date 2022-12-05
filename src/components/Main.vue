@@ -163,7 +163,12 @@ export default{
                 <button type="button" id="sing-up" class="btn btn-outline-primary">SIGN-UP NOW!</button>
             </div>
             <div>
-                <span><strong>FOLLOW US</strong></span>
+                <span id="social"><strong>FOLLOW US</strong></span>
+                <img class="icon" src="../assets/img/footer-facebook.png" alt="">
+                <img class="icon" src="../assets/img/footer-twitter.png" alt="">
+                <img class="icon" src="../assets/img/footer-youtube.png" alt="">
+                <img class="icon" src="../assets/img/footer-pinterest.png" alt="">
+                <img class="icon" src="../assets/img/footer-periscope.png" alt="">
             </div>
         </div>
     </section>
@@ -186,6 +191,9 @@ export default{
 }
 #sing-up{
     color: white;
+}
+#social{
+    color: rgb(2, 130, 249);
 }
 
 .avviso{
@@ -250,6 +258,10 @@ export default{
 .logo-bg{
     position: relative;
     top: -55px;
+}
+
+.icon{
+    padding-left: 2rem;
 }
 
 a{
