@@ -90,8 +90,8 @@ export default{
 .immagini{
     background-color: $Bg-main-secondo;
     width: 40px;
-    object-fit: cover;
-    height: -webkit-fill-available;
+    object-fit: contain;
+    height: 40px;
 }
 
 .container{
