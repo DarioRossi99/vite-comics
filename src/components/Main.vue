@@ -92,13 +92,18 @@ export default{
     <section class="bg-fumetti">
         <img id="jumbo" src="../assets/img/jumbotron.jpg" alt="">
         <div class="container">
+            <div class="avviso d-flex">
+                <h3 class="m-0">CURRENT SERIES</h3>
+            </div>
+        </div>
+        <div class="container">
             <div class="products-container">
-                <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="row row-cols-1 row-cols-md-6 g-4">
                     <div class="col" v-for="(fumetto, i) in listaFumetti" :key="i">
                         <div class="card-fumetti">
-                            <link rel="stylesheet" url="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX">
+                            <img rel="stylesheet" :src="fumetto.thumb">
                             <div class="card-body">
-                                <h5 class="card-title">{{fumetto.series}}</h5>
+                                <h5 class="card-title pt-4">{{fumetto.series}}</h5>
                                 <p class="card-text">{{fumetto.type}}</p>
                                 <span class="card-text">{{fumetto.price}}</span>
                             </div>
@@ -106,6 +111,9 @@ export default{
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="d-flex py-5 justify-content-center">
+            <div class="btn btn-primary px-5">Load More</div>
         </div>
     </section>
     
@@ -118,22 +126,22 @@ export default{
 
             <div class="card">
                 <img class="immagini" src="../assets/img/buy-comics-merchandise.png" alt="">
-                <a href="#"></a>
+                <a href="#">DC MERCHANDISE</a>
             </div>
             
             <div class="card">
                 <img class="immagini" src="../assets/img/buy-comics-subscriptions.png" alt="">
-                <a href="#"></a>
+                <a href="#">SUBSCRIPTION</a>
             </div>
 
             <div class="card">
                 <img class="immagini" src="../assets/img/buy-comics-shop-locator.png" alt="">
-                <a href="#"></a>
+                <a href="#">COMIC SHOP LOCATOR</a>
             </div>
 
             <div class="card">
                 <img class="immagini" src="../assets/img/buy-dc-power-visa.svg" alt="">
-                <a href="#"></a>
+                <a href="#">DC POWER VISA</a>
             </div>
         </div>      
     </section>
@@ -145,6 +153,17 @@ export default{
             </div>
             <div class="logo-bg">
                 <img src="../assets/img/dc-logo-bg.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-footer">
+        <div class="container">
+            <div>
+                <button type="button" id="sing-up" class="btn btn-outline-primary">SIGN-UP NOW!</button>
+            </div>
+            <div>
+                <span><strong>FOLLOW US</strong></span>
             </div>
         </div>
     </section>
@@ -165,21 +184,42 @@ export default{
     width: 100%;
     background-size: cover;
 }
+#sing-up{
+    color: white;
+}
+
+.avviso{
+    color: white;
+    background-color: $Bg-main-secondo;
+    position: relative;
+    top: -20px;
+    padding: 0 3rem;
+}
 .fumetti{
     padding: 3rem 0;
     background-color: $Bg-main-primo;
     color: $Bg-header;
 }
 
+.row{
+    padding-top: 5rem;
+}
+
 .bg-fumetti{
     background-color: rgb(28, 28, 28);
+}
+
+.bg-footer{
+    background-color: rgb(48, 48, 48);
+    padding: 4rem;
+    position: relative;
 }
 .shop{
     padding: 3rem;
     background-color: $Bg-main-secondo;
     color: $Bg-header;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .card{
@@ -199,6 +239,7 @@ export default{
     width: 40px;
     object-fit: contain;
     height: 40px;
+    margin-left: 3rem;
 }
 
 .container{
